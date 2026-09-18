@@ -1,0 +1,31 @@
+{
+  "generation_shape": [
+    68778,
+    7
+  ],
+  "weather_shape": [
+    3182,
+    6
+  ],
+  "inverter_count": 22,
+  "plant_id": 4135001,
+  "prediction_target": "AC_POWER",
+  "model_metrics": {
+    "mae": 285.8974674860024,
+    "rmse": 570.0151719364092,
+    "r2": 0.9948800104679771,
+    "train_rows": 2525,
+    "test_rows": 632,
+    "features": [
+      "AMBIENT_TEMPERATURE",
+      "MODULE_TEMPERATURE",
+      "IRRADIATION",
+      "hour",
+      "day_of_year",
+      "month",
+      "day_of_week",
+      "is_daylight"
+    ],
+    "target": "AC_POWER"
+  }
+}
