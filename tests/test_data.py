@@ -56,3 +56,19 @@ def test_fault_detection_no_missing_values():
     )
 
     assert df.isnull().sum().sum() == 0
+
+
+def test_generation_numeric_columns():
+    df = pd.read_csv(
+        "dataset/energy_prediction/Plant_1_Generation_Data.csv"
+    )
+
+    numeric_columns = [
+        "DC_POWER",
+        "AC_POWER",
+        "DAILY_YIELD",
+        "TOTAL_YIELD"
+    ]
+
+    for column in numeric_columns:
+        assert pd.api.types.is_numeric_dtype(df[column])
